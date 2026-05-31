@@ -1,0 +1,61 @@
+{
+  "name": "devcli-toolkit",
+  "version": "1.0.0",
+  "description": "🚀 A lightweight, all-in-one CLI toolkit for developers - JSON formatter, Base64 codec, timestamp converter, regex tester, and more!",
+  "main": "src/index.js",
+  "bin": {
+    "devcli": "./bin/devcli.js",
+    "dtk": "./bin/devcli.js"
+  },
+  "scripts": {
+    "start": "node bin/devcli.js",
+    "test": "jest",
+    "lint": "eslint src/ bin/",
+    "build": "pkg . --out-path=dist/",
+    "build:all": "pkg . --targets node18-linux-x64,node18-macos-x64,node18-win-x64 --out-path=dist/"
+  },
+  "keywords": [
+    "cli",
+    "developer-tools",
+    "json",
+    "base64",
+    "timestamp",
+    "regex",
+    "uuid",
+    "password",
+    "qr-code",
+    "utilities"
+  ],
+  "author": "DevCLI Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/devcli-toolkit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/devcli-toolkit/issues"
+  },
+  "homepage": "https://github.com/yourusername/devcli-toolkit#readme",
+  "dependencies": {
+    "commander": "^11.1.0",
+    "chalk": "^4.1.2",
+    "qrcode-terminal": "^0.12.0",
+    "clipboardy": "^2.3.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "eslint": "^8.55.0",
+    "pkg": "^5.8.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "pkg": {
+    "scripts": [
+      "src/**/*.js"
+    ],
+    "assets": [
+      "package.json"
+    ]
+  }
+}
